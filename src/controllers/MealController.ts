@@ -380,13 +380,13 @@ class MealController {
       const { id } = req.params;
 
       // Validate ObjectId
-      if (!this.validateObjectId(id)) {
-        res.status(400).json({
-          status: 400,
-          message: "Invalid meal ID format",
-        });
-        return;
-      }
+      // if (!this.validateObjectId(id)) {
+      //   res.status(400).json({
+      //     status: 400,
+      //     message: "Invalid meal ID format",
+      //   });
+      //   return;
+      // }
 
       const meal = await Meal.findById(id);
 
